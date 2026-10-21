@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/*
+!data/README.md
+*.nii
+*.nii.gz
+*.dcm
+.ipynb_checkpoints/
+.pytest_cache/
+outputs/
+.DS_Store
+
+# Private course documents must never be committed, even if copied here later.
+Project Concept Proposal.pdf
+Project Concept Proposal.docx
+Team Formation and Initial Project Ideas.docx
+Team Formation and Initial Project Ideas.pdf
