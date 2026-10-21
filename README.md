@@ -37,11 +37,10 @@ python -m pip install -r requirements.txt
 ```
 
 Each teammate creates their own `.venv`; do not share the environment folder.
-In VS Code, use **Python: Select Interpreter** to select that environment.
-Apple Silicon Macs should use native arm64 Python. Requirements automatically
-select legacy PyTorch 2.2.2 and NumPy 1.x on Intel Macs; current PyTorch builds
-are used on Windows and native Apple Silicon. Intel Mac support is a legacy
-compatibility path and still needs testing on a teammate's machine.
+Use any editor or IDE you prefer, configured to use the project's virtual
+environment. Dependencies are selected automatically for the operating system
+and processor. Installation depends on available packages for your system;
+macOS compatibility still needs to be verified on a Mac.
 
 ## Dataset
 
