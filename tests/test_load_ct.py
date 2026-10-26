@@ -93,3 +93,15 @@ def test_empty_pair():
     """An empty volume cannot be used for inspection or modeling."""
     with pytest.raises(ValueError, match="nonempty"):
         validate_pair(np.empty((0, 2, 3)), np.empty((0, 2, 3)))
+
+
+def test_invalid_nifti_files(tmp_path):
+    """A NIfTI suffix alone is insufficient; data must be finite and 3D."""
+    path = tmp_path / "invalid.nii"
+    path.write_bytes(b"not a NIfTI image")
+    with pytest.raises(ValueError, match="Could not read"):
+        load_volume(path)
+    for array in (np.zeros((2, 2, 2, 2)), np.full((2, 2, 2), np.nan)):
+        nib.save(nib.Nifti1Image(array, np.eye(4)), path)
+        with pytest.raises(ValueError):
+            load_volume(path)
