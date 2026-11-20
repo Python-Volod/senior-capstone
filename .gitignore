@@ -10,6 +10,8 @@ data/*
 .ipynb_checkpoints/
 .pytest_cache/
 outputs/
+*.pt
+*.pth
 .DS_Store
 
 # Private course documents must never be committed, even if copied here later.
