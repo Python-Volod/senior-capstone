@@ -10,6 +10,7 @@ training/evaluation workflow. This is not a clinical diagnostic system.
 - [Respond to professor feedback and plan model comparisons](docs/integration-plan.md)
 - [One-patient training-fit diagnostic](docs/overfit-diagnostic.md)
 - [Training-only hard-negative mining and crop variety](docs/hard-negative-training.md)
+- [Launch the local CT viewer and prediction interface](docs/local-ui.md)
 
 An initial real pair and a six-patient tumor-only pilot are available locally.
 The pilot uses four training patients, one validation patient and one reserved
